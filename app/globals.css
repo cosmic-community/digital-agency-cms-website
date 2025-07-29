@@ -56,28 +56,70 @@
   }
   
   .prose-custom {
-    @apply prose prose-lg prose-gray max-w-none;
+    @apply text-lg text-gray-700 max-w-none leading-relaxed;
   }
   
-  .prose-custom h1,
-  .prose-custom h2,
+  .prose-custom h1 {
+    @apply text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight;
+  }
+  
+  .prose-custom h2 {
+    @apply text-2xl md:text-3xl font-bold text-gray-900 mb-4 mt-8 leading-tight;
+  }
+  
   .prose-custom h3 {
-    @apply text-gray-900;
+    @apply text-xl md:text-2xl font-semibold text-gray-900 mb-3 mt-6;
   }
   
   .prose-custom p {
-    @apply text-gray-700 leading-relaxed;
+    @apply text-gray-700 leading-relaxed mb-4;
   }
   
   .prose-custom ul {
-    @apply space-y-2;
+    @apply space-y-2 mb-4 pl-6;
+  }
+  
+  .prose-custom ol {
+    @apply space-y-2 mb-4 pl-6;
   }
   
   .prose-custom li {
-    @apply text-gray-700;
+    @apply text-gray-700 leading-relaxed;
+  }
+  
+  .prose-custom ul li {
+    @apply list-disc;
+  }
+  
+  .prose-custom ol li {
+    @apply list-decimal;
   }
   
   .prose-custom strong {
     @apply text-gray-900 font-semibold;
+  }
+  
+  .prose-custom em {
+    @apply italic;
+  }
+  
+  .prose-custom blockquote {
+    @apply border-l-4 border-primary-500 pl-4 italic text-gray-600 my-6;
+  }
+  
+  .prose-custom a {
+    @apply text-primary-600 hover:text-primary-700 underline transition-colors duration-200;
+  }
+  
+  .prose-custom code {
+    @apply bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm font-mono;
+  }
+  
+  .prose-custom pre {
+    @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4;
+  }
+  
+  .prose-custom pre code {
+    @apply bg-transparent p-0 text-gray-100;
   }
 }
